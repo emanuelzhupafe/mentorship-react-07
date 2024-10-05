@@ -7,7 +7,7 @@ import { PostType } from '../../assets/posts';
 export const CreatePost = ({ onNewCreatedPost }) => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [newPost, setNewPost] = useState<PostType>({
-    userName: '',
+    userName: '--',
     title: '',
     description: '',
     dateCreated: '',
@@ -26,6 +26,14 @@ export const CreatePost = ({ onNewCreatedPost }) => {
     e.preventDefault();
 
     onNewCreatedPost(newPost);
+
+    setNewPost({
+        userName: '--',
+        title: '',
+        description: '',
+        dateCreated: '',
+        imgUrl: ''
+    })
   };
 
   useEffect(() => {
@@ -55,15 +63,15 @@ export const CreatePost = ({ onNewCreatedPost }) => {
       <form onSubmit={(e) => onPostSubmit(e)}>
         <label>
           Post Title:
-          <input type="text" name="title" onChange={(e) => handleInput(e)} />
+          <input type="text" name="title" value={newPost.title} onChange={(e) => handleInput(e)} />
         </label>
         <label>
           Post Description:
-          <input type="text" name="description" onChange={(e) => handleInput(e)} />
+          <input type="text" name="description" value={newPost.description} onChange={(e) => handleInput(e)} />
         </label>
         <label>
           User:
-          <select name="userName" onChange={(e) => handleInput(e)}>
+          <select name="userName" value={newPost.userName} onChange={(e) => handleInput(e)}>
             <option value="--">Select user</option>
             {userList.map((user) => {
               return (
@@ -76,7 +84,7 @@ export const CreatePost = ({ onNewCreatedPost }) => {
         </label>
         <label>
           Image URL:
-          <input type="text" name="imgUrl" onChange={(e) => handleInput(e)} />
+          <input type="text" name="imgUrl" value={newPost.imgUrl} onChange={(e) => handleInput(e)} />
         </label>
         <button disabled={isDisabled} type="submit" className={styles.SubmitButton}>
           Submit

@@ -20,7 +20,7 @@ export const posts: PostType[] = [
     dateCreated: '2021-02-01T21:45:00',
     title: 'Some random generic title from a user',
     description: 'Some random description from a user.',
-    imgUrl: 'https://knowledge.ckgsb.edu.cn/wp-content/uploads/2017/10/simple-minimalism.jpg'
+    imgUrl: 'https://plus.unsplash.com/premium_photo-1668037381937-f7df1b888573?q=80&w=3221&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     userName: 'Random Person 3',
@@ -35,7 +35,7 @@ export const posts: PostType[] = [
     dateCreated: '2021-02-01T19:45:00',
     title: 'Some random generic title from a user',
     description: 'Some random description from a user.',
-    imgUrl: 'https://pbs.twimg.com/profile_images/1342768807891378178/8le-DzgC.jpg'
+    imgUrl: 'https://plus.unsplash.com/premium_photo-1668037381937-f7df1b888573?q=80&w=3221&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     userName: 'Random Person 5',
